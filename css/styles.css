@@ -1560,7 +1560,7 @@ footer h4{
 .next-session {
   margin-top: 10px;
   font-size: 0.85rem;
-  color: var(--text-light);
+  color: var (--text-light);
   margin-top: 10px;
   color: var(--text-light);
   font-size: 0.95rem;
@@ -5967,553 +5967,6 @@ footer.visible {
     transform: translateY(0);
 }
 
-/* Animation de flottement pour les CTA */
-.float-animation {
-    animation: floating 3s ease-in-out infinite;
-}
-
-@keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Animation de pulsation pour les chiffres en surbrillance */
-.pulse-animation {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); color: inherit; }
-    50% { transform: scale(1.1); color: var(--primary-color); }
-    100% { transform: scale(1); color: inherit; }
-}
-
-/**
- * Styles propres pour le site de workshop AI
- * Ce fichier remplace les styles problématiques en garantissant un affichage correct
- */
-
-:root {
-    --primary-color: #5e17eb;
-    --primary-light: #7a3aff;
-    --primary-dark: #4a12c0;
-    --secondary-color: #ffffff;
-    --text-color: #333333;
-    --text-light: #666666;
-    --background-color: #f8f9fa;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
-
-/* Correction des styles des icônes dans les features */
-.format-feature:hover .feature-icon {
-    transform: scale(1.15) rotate(5deg);
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-    color: white;
-}
-
-.format-feature:hover .feature-icon i {
-    color: white;
-}
-
-/* Restaurer les styles des cartes de témoignage */
-.testimonial-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Styles d'animation améliorés pour l'apparition au scroll */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    transition-delay: calc(var(--i, 0) * 0.1s);
-}
-
-.animate-on-scroll.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Styles spécifiques pour les technologies */
-.tech-card {
-    background-color: white;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(94, 23, 235, 0.05);
-    position: relative;
-}
-
-.tech-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(94, 23, 235, 0.15);
-}
-
-.tech-card .tech-logo {
-    width: 100%;
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: rgba(94, 23, 235, 0.03);
-    position: relative;
-    overflow: hidden;
-}
-
-.tech-card .tech-logo img {
-    max-width: 120px;
-    max-height: 120px;
-    object-fit: contain;
-    transition: transform 0.5s ease;
-}
-
-.tech-card:hover .tech-logo img {
-    transform: scale(1.1);
-}
-
-.tech-card .tech-content {
-    padding: 25px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.tech-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: var(--primary-dark);
-}
-
-.tech-card p {
-    color: var(--text-light);
-    margin-bottom: 20px;
-    line-height: 1.6;
-    flex: 1;
-}
-
-.tech-card .tech-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-
-.tech-card .tech-features li {
-    padding-left: 22px;
-    position: relative;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-.tech-card .tech-features li:before {
-    content: '✓';
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-.tech-card .tech-icon {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(94, 23, 235, 0.2);
-}
-
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-    .tech-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 20px;
-    }
-
-    .tech-card .tech-logo {
-        height: 140px;
-    }
-
-    .tech-card .tech-logo img {
-        max-width: 100px;
-        max-height: 100px;
-    }
-
-    .tech-card .tech-content {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .tech-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Spots left pulse animation */
-.spots-pulse {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: white;
-    animation: spot-pulse 1.5s infinite;
-}
-
-@keyframes spot-pulse {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-    }
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-    }
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    }
-}
-
-/* Correction des animations */
-@keyframes pulse {
-    0% { transform: scale(1); color: inherit; }
-    50% { transform: scale(1.1); color: var(--primary-color); }
-    100% { transform: scale(1); color: inherit; }
-}
-
-/* Style pour les numéros en surbrillance */
-.highlight-number {
-    color: var(--primary-color);
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-
-@media screen and (max-width: 768px) {
-  .site-footer ul {
-    text-align: center !important;
-  }
-
-  .site-footer ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-
-/* Styles pour le compteur animé */
-
-/* Conteneur du compteur */
-.countdown-container {
-    text-align: center;
-}
-
-.countdown-title {
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-    font-size: 1.1rem;
-}
-
-/* Style du compteur lui-même */
-.countdown-timer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 0 auto;
-}
-
-/* Style de chaque boîte (jours, heures, minutes) */
-.countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-    box-shadow: 0 8px 20px rgba(94, 23, 235, 0.1);
-    border-radius: 10px;
-    padding: 15px;
-    min-width: 80px;
-    border: 1px solid rgba(94, 23, 235, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: countdown-pop 0.6s ease-out forwards;
-    transform: scale(0.8);
-    opacity: 0;
-}
-
-.countdown-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(94, 23, 235, 0.15);
-}
-
-/* Animation pour le compteur */
-@keyframes countdown-pop {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    70% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes countdown-pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Délais d'animation pour chaque élément */
-.countdown-item:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.countdown-item:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.countdown-item:nth-child(3) {
-    animation-delay: 0.5s;
-}
-
-/* Style des chiffres */
-.countdown-value {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    line-height: 1;
-    margin-bottom: 5px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Animation pour la mise à jour des chiffres */
-.countdown-update {
-    animation: number-flip 0.5s ease-in-out;
-}
-
-/* Animation spécifique pour les secondes */
-.countdown-seconds-update {
-    animation: seconds-update 0.5s ease;
-}
-
-/* Animation de pulsation pour les secondes */
-.pulse-effect {
-    animation: pulse-seconds 0.5s ease-in-out;
-}
-
-@keyframes number-flip {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    20% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    80% {
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes seconds-update {
-    0% {
-        color: var(--primary-color);
-    }
-    50% {
-        color: var(--accent-color, #ff6b6b);
-    }
-    100% {
-        color: var(--primary-color);
-    }
-}
-
-@keyframes pulse-seconds {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-        color: var(--accent-color, #ff6b6b);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Style des libellés (jours, heures, minutes) */
-.countdown-label {
-    font-size: 0.85rem;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .countdown-item {
-        min-width: 70px;
-        padding: 12px;
-    }
-
-    .countdown-value {
-        font-size: 2rem;
-    }
-
-    .countdown-label {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .countdown-timer {
-        gap: 12px;
-    }
-
-    .countdown-item {
-        min-width: 60px;
-        padding: 10px;
-    }
-
-    .countdown-value {
-        font-size: 1.8rem;
-    }
-
-    .countdown-label {
-        font-size: 0.7rem;
-    }
-}
-
-/* Styles d'animation améliorés pour l'apparition au scroll */
-.animation-ready {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    transition-delay: calc(var(--i, 0) * 0.1s);
-    will-change: opacity, transform;
-    backface-visibility: hidden;
-}
-
-.visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-/* Animations spécifiques pour différents types d'éléments */
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-in-up.animation-ready {
-    transform: translateY(40px);
-}
-
-.fade-in-up.visible {
-    transform: translateY(0);
-}
-
-.slide-in-right.animation-ready {
-    transform: translateX(40px);
-}
-
-.slide-in-right.visible {
-    transform: translateX(0);
-}
-
-.fade-in-scale.animation-ready {
-    transform: scale(0.9) translateY(20px);
-}
-
-.fade-in-scale.visible {
-    transform: scale(1) translateY(0);
-}
-
-/* Styles spécifiques pour les en-têtes de section */
-.section-header.animation-ready h2,
-.format-header.animation-ready h2 {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    transition-delay: 0.1s;
-}
-
-.section-header.visible h2,
-.format-header.visible h2 {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-.section-header.animation-ready .section-tag,
-.format-header.animation-ready .section-tag {
-    opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.section-header.visible .section-tag,
-.format-header.visible .section-tag {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-.section-header.animation-ready .section-intro,
-.format-header.animation-ready .format-intro {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-    transition-delay: 0.2s;
-}
-
-.section-header.visible .section-intro,
-.format-header.visible .format-intro {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
 /* Animation des cartes de témoignages */
 .testimonial-card.animation-ready {
     opacity: 0;
@@ -6522,13 +5975,13 @@ footer.visible {
 }
 
 .testimonial-card.visible {
-    opacity: 1 !important;
-    transform: translateY(0) scale(1) !important;
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .testimonial-card:hover {
-    transform: translateY(-8px) scale(1.01) !important;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Animation des fonctionnalités */
@@ -6540,8 +5993,8 @@ footer.visible {
 }
 
 .format-feature.visible {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Animation des cartes de bénéfices */
@@ -6553,8 +6006,8 @@ footer.visible {
 }
 
 .benefit-card.visible {
-    opacity: 1 !important;
-    transform: translateY(0) scale(1) !important;
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 /* Animation du footer */
@@ -6565,8 +6018,8 @@ footer.animation-ready {
 }
 
 footer.visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Animations spécifiques pour le footer */
@@ -6864,5 +6317,121 @@ footer.visible {
 
   .journey-step .step-number {
     margin-bottom: 0;
+  }
+}
+
+/* Styles pour la section Technologies */
+#technologies-section {
+  background-color: #f5f2ff; /* Un peu différent de la section benefits précédente */
+  position: relative;
+  overflow: hidden;
+}
+
+#technologies-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(94, 23, 235, 0.05), transparent 60%);
+  z-index: 0;
+}
+
+#technologies-section .section-header {
+  margin-bottom: 50px;
+}
+
+.benefit-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 0 var(--border-radius) 0 var(--border-radius);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 10px rgba(94, 23, 235, 0.2);
+  z-index: 2;
+}
+
+/* Animation pour les badges */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.benefit-tag {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Styles spécifiques pour le badge "TENDANCE" */
+.benefit-card:nth-child(4) .benefit-tag {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+}
+
+/* Styles pour les icônes des technologies */
+#technologies-section .icon {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-color), #9370DB);
+  transform: rotate(-5deg);
+}
+
+#technologies-section .icon::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* Animation pour les icônes au survol */
+#technologies-section .icon:hover {
+  transform: rotate(0deg) scale(1.1);
+  box-shadow: 0 10px 25px rgba(94, 23, 235, 0.3);
+}
+
+/* Améliorer la distinction visuelle entre les sections */
+#technologies-section {
+  margin-top: -20px;
+  padding-top: 120px;
+}
+
+/* Style spécifique pour le CTA de la section technologies */
+#technologies-section .benefits-cta .secondary-cta {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  border: none;
+  transform: scale(1.05);
+}
+
+#technologies-section .benefits-cta .secondary-cta:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(94, 23, 235, 0.3);
+}
+
+/* Responsive pour la section technologies */
+@media (max-width: 768px) {
+  #technologies-section {
+    padding-top: 80px;
+    margin-top: 0;
+  }
+
+  .benefit-tag {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+
+  #technologies-section .section-header h2 {
+    font-size: 1.8rem;
   }
 }

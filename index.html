@@ -189,6 +189,164 @@
             })();
         </script>
 
+        <!-- Nouvelle section pour les technologies tendance -->
+        <section class="benefits animate-on-scroll animation-ready visible" id="technologies-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag">TECHNOLOGIES</span>
+                    <h2>Les outils d'IA que vous allez maîtriser</h2>
+                    <p class="section-intro">Notre atelier vous permettra de gagner un temps précieux et d'acquérir des compétences recherchées sur le marché</p>
+                </div>
+
+                <div class="benefits-grid animation-ready visible">
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="benefit-tag">POPULAIRE</div>
+                        <div class="benefit-content">
+                            <div class="icon"><i class="fas fa-robot"></i></div>
+                            <h3>Open AI</h3>
+                            <p>Faites en 20 minutes ce qui vous prenait deux heures auparavant grâce aux techniques d'IA présentées.</p>
+                            <ul class="benefit-list">
+                                <li>ChatGPT pour la génération de contenu</li>
+                                <li>DALL-E pour la création d'images</li>
+                                <li>Assistants IA personnalisés</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="benefit-content">                            <div class="icon"><i class="fas fa-image"></i></div>
+                            <h3>Midjourney</h3>
+                            <p>Exploitez Claude d'Anthropic pour l'analyse de données, la recherche approfondie et les tâches complexes.</p>
+                            <ul class="benefit-list">
+                                <li>Générer des images de haute qualité</li>
+                                <li>Personnalisation avancée des visuels</li>
+                                <li>Adaptation aux besoins marketing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="benefit-content">
+                            <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                            <h3>Claude</h3>
+                            <p>Créez des visuels impressionnants pour vos présentations, votre marketing et vos supports de communication.</p>
+                            <ul class="benefit-list">
+                                <li>Analyse de documents complexes</li>
+                                <li>Rédaction structurée et créative</li>
+                                <li>Traitement de données volumineux</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="benefit-tag">TENDANCE</div>
+                        <div class="benefit-content">
+                            <div class="icon"><i class="fas fa-code"></i></div>
+                            <h3>GitHub Copilot</h3>
+                            <p>Accélérez votre développement, automatisez les tâches répétitives et améliorez la qualité de votre code.</p>
+                            <ul class="benefit-list">
+                                <li>Autocomplétion de code intelligente</li>
+                                <li>Génération de fonctions complètes</li>
+                                <li>Intégration dans votre IDE favori</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits-cta animate-on-scroll">
+                    <a href="#inscription" class="cta-button secondary-cta" style="opacity: 1 !important;">Découvrir toutes les technologies</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Script pour garantir la visibilité de la nouvelle section technologies -->
+        <script>
+            (function() {
+                // Fonction pour rendre la nouvelle grille de technologies visible et responsive
+                function makeTechGridVisible() {
+                    var techSection = document.getElementById('technologies-section');
+                    if (techSection) {
+                        techSection.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important;';
+                    }
+
+                    var grid = techSection.querySelector('.benefits-grid');
+                    if (grid) {
+                        // Ajouter les classes
+                        grid.classList.add('animation-ready', 'visible');
+
+                        // Styles inline avec !important
+                        grid.style.setProperty('display', 'grid', 'important');
+                        grid.style.setProperty('visibility', 'visible', 'important');
+                        grid.style.setProperty('opacity', '1', 'important');
+
+                        // Responsive styling
+                        if (window.innerWidth <= 768) {
+                            grid.style.setProperty('grid-template-columns', '1fr', 'important');
+                        } else {
+                            grid.style.setProperty('grid-template-columns', 'repeat(2, 1fr)', 'important');
+                        }
+
+                        // Assurer la visibilité de chaque carte
+                        var cards = grid.querySelectorAll('.benefit-card');
+                        cards.forEach(function(card) {
+                            card.style.setProperty('visibility', 'visible', 'important');
+                            card.style.setProperty('opacity', '1', 'important');
+                        });
+                    }
+                }
+
+                // Exécuter immédiatement
+                makeTechGridVisible();
+
+                // Et après un court délai
+                setTimeout(makeTechGridVisible, 100);
+                setTimeout(makeTechGridVisible, 500);
+
+                // Aussi au chargement complet
+                window.addEventListener('load', makeTechGridVisible);
+            })();
+        </script>
+
+        <!-- Script pour animer les éléments de la section Technologies -->
+        <script>
+            (function() {
+                // Fonction pour initialiser les animations de la section technologies
+                function initTechnologiesSection() {
+                    var techSection = document.getElementById('technologies-section');
+                    if (!techSection) return;
+
+                    // S'assurer que la section est visible
+                    techSection.style.visibility = 'visible';
+                    techSection.style.opacity = '1';
+
+                    // Animation des badges "POPULAIRE" et "TENDANCE"
+                    setTimeout(function() {
+                        var badges = techSection.querySelectorAll('.benefit-tag');
+                        badges.forEach(function(badge, index) {
+                            badge.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+                            badge.style.opacity = '1';
+                            badge.style.transform = 'scale(1)';
+                        });
+                    }, 500);
+
+                    // Assurer la visibilité des cartes
+                    var cards = techSection.querySelectorAll('.benefit-card');
+                    cards.forEach(function(card) {
+                        card.style.visibility = 'visible';
+                        card.style.opacity = '1';
+                    });
+
+                    console.log('✓ Section technologies initialisée avec succès');
+                }
+
+                // Exécuter après un court délai
+                setTimeout(initTechnologiesSection, 100);
+
+                // Et aussi après le chargement complet
+                window.addEventListener('load', initTechnologiesSection);
+            })();
+        </script>
+
         <section class="workshop-format animate-on-scroll">
             <div class="container">
                 <div class="format-header animate-on-scroll">
