@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataBird - Maîtrise l'IA Générative pour Booster ta Productivité</title>
+
+    <!-- Meta tags pour SEO et partage social -->
+    <meta name="description" content="Workshop en ligne pour maîtriser l'IA générative et booster ta productivité. Découvre des applications concrètes et des techniques efficaces. Places limitées !">
+    <meta property="og:title" content="DataBird - Workshop IA Générative pour Booster ta Productivité">
+    <meta property="og:description" content="Découvre comment utiliser l'IA générative pour gagner jusqu'à 5h par semaine. Workshop en ligne le 24 avril à 12h.">
+    <meta property="og:image" content="https://databird.co/images/workshop-ia-banner.jpg">
+    <meta property="og:url" content="https://databird.co/workshop-ia">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="DataBird Logo">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><span class="highlight">MAÎTRISE L'IA GÉNÉRATIVE</span><br>POUR BOOSTER TA PRODUCTIVITÉ</h1>
+
+                    <p class="subtitle">Workshop en ligne • Dimanche 25 mai 2025 • 12h</p>
+
+                    <p>Tu entends parler de l'IA générative, mais tu ne sais pas comment l'utiliser efficacement ? Découvre comment gagner jusqu'à 5h par semaine grâce à l'IA.</p>
+
+                    <div class="cta-container">
+                        <a href="#inscription" class="cta-button primary-cta">Réserver ma place <span class="cta-highlight">GRATUITEMENT</span></a>
+                        <p class="cta-urgency" style="background-color: white;">⏱️ <strong style="color: blueviolet;">Places limitées à 100 participants</strong></p>
+                    </div>
+                </div>
+
+                <div class="hero-image"">
+                    <img src="./images/IA.png" alt="IA DataBird" class="optimized-image">
+                    <div class="particles-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits animate-on-scroll" id="benefits-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag">Programme</span>
+                    <h2>Ce que tu vas apprendre</h2>
+                    <p class="section-intro">Un programme complet pour maîtriser l'IA générative et l'appliquer immédiatement à ton travail quotidien.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="benefit-number">01</div>
+                        <div class="benefit-content">
+                            <div class="icon"><i class="fas fa-brain"></i></div>
+                            <h3>Comprendre l'IA générative</h3>
+                            <p>Maîtrise les concepts fondamentaux et le fonctionnement de l'IA générative sans jargon technique.</p>
+                            <ul class="benefit-list">
+                                <li>Les bases des modèles de langage</li>
+                                <li>Comment formuler des requêtes efficaces</li>
+                                <li>Forces et limites de l'IA générative</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="benefit-number">02</div>
+                        <div class="benefit-content">
+                            <div class="icon"><i class="fas fa-tools"></i></div>
+                            <h3>Découvrir les outils</h3>
+                            <p>Explore les meilleurs outils d'IA disponibles et comment les intégrer à ton workflow.</p>
+                            <ul class="benefit-list">
+                                <li>Comparatif des outils les plus performants</li>
+                                <li>Démonstrations en direct de cas d'usage</li>
+                                <li>Astuces d'intégration à tes outils actuels</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="benefit-number">03</div>
+                        <div class="benefit-content">
+                            <div class="icon"><i class="fas fa-rocket"></i></div>
+                            <h3>Booster ta productivité</h3>
+                            <p>Apprends des techniques concrètes pour gagner du temps et améliorer ton efficacité.</p>
+                            <ul class="benefit-list">
+                                <li>Automatisation des tâches répétitives</li>
+                                <li>Création de contenu assistée par IA</li>
+                                <li>Analyse de données simplifiée</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="benefit-number">04</div>
+                        <div class="benefit-content">
+                            <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Applications pratiques</h3>
+                            <p>Découvre des cas d'usage concrets adaptés à ton secteur d'activité.</p>
+                            <ul class="benefit-list">
+                                <li>Exemples par secteur (marketing, RH, IT...)</li>
+                                <li>Templates prêts à l'emploi</li>
+                                <li>Stratégies d'implémentation rapide</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits-cta animate-on-scroll">
+                    <a href="#inscription" class="cta-button secondary-cta" style="opacity: 1 !important;">Réserver ma place maintenant</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Script inline pour forcer l'affichage de la section benefits -->
+        <script>
+            (function() {
+                // Force l'affichage de la section benefits immédiatement
+                var benefitsSection = document.getElementById('benefits-section');
+                if (benefitsSection) {
+                    benefitsSection.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important;';
+                }
+
+                // Réexécute cette vérification après un court délai
+                setTimeout(function() {
+                    var section = document.getElementById('benefits-section');
+                    if (section) {
+                        section.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important;';
+                        console.log('Section benefits forcée à être visible par script inline');
+                    }
+
+                    // Initialiser les composants améliorés
+                    if (typeof initComponentAnimations === 'function') {
+                        initComponentAnimations();
+                    }
+                }, 500);
+            })();
+        </script>
+
+        <section class="workshop-format animate-on-scroll">
+            <div class="container">
+                <div class="format-header animate-on-scroll">
+                    <span class="section-tag">Programme</span>
+                    <h2>Un workshop structuré pour <span class="text-gradient">maximiser votre apprentissage</span></h2>
+                    <p class="format-intro">2 heures d'immersion dans l'IA générative avec des applications concrètes pour votre métier.</p>
+
+                    <!-- Compteur visuel ajouté -->
+                    <div class="countdown-container">
+                        <div class="countdown-title">Prochaine session dans:</div>
+                        <div class="countdown-timer" id="workshop-countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="countdown-days">12</span>
+                                <span class="countdown-label">Jours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="countdown-hours">18</span>
+                                <span class="countdown-label">Heures</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="countdown-minutes">45</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="format-badges">
+                        <div class="format-badge">
+                            <div class="badge-icon-wrapper">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span>Places limitées à <strong>30 participants</strong></span>
+                        </div>
+                        <div class="format-badge">
+                            <div class="badge-icon-wrapper">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span><strong>2h</strong> de contenu intensif</span>
+                        </div>
+                        <div class="format-badge">
+                            <div class="badge-icon-wrapper">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <span><strong>Certificat</strong> de participation</span>
+                        </div>
+                        <!-- Nouveau badge ajouté -->
+                        <div class="format-badge">
+                            <div class="badge-icon-wrapper">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <span><strong>Support</strong> post-formation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="format-container">
+                    <div class="format-left timeline-wrapper">
+                        <div class="program-header">
+                            <h3>Programme détaillé</h3>
+                            <p>Un parcours d'apprentissage optimisé pour une montée en compétence rapide</p>
+                        </div>
+
+                        <!-- Programme simplifié avec design moderne -->
+                        <div class="program-cards">
+                            <!-- Session 1 -->
+                            <div class="program-card" data-step="1">
+                                <div class="program-card-time">12h00 - 12h15</div>
+                                <div class="program-card-tag">Introduction</div>
+                                <h3>Fondamentaux de l'IA générative</h3>
+                                <p>Découvrez les concepts clés et les possibilités révolutionnaires offertes par l'IA générative pour transformer votre façon de travailler.</p>
+                                <div class="program-topics">
+                                    <span>Principes de base</span>
+                                    <span>Modèles populaires</span>
+                                    <span>Cas d'usage</span>
+                                </div>
+                            </div>
+
+                            <!-- Session 2 -->
+                            <div class="program-card" data-step="2">
+                                <div class="program-card-time">12h15 - 13h00</div>
+                                <div class="program-card-tag">Pratique</div>
+                                <h3>Outils et démonstrations en direct</h3>
+                                <p>Assistez à des démonstrations en temps réel des outils les plus puissants et apprenez à les utiliser efficacement dans votre contexte professionnel.</p>
+                                <div class="program-topics">
+                                    <span>ChatGPT</span>
+                                    <span>Midjourney</span>
+                                    <span>Claude</span>
+                                    <span>Plugins</span>
+                                </div>
+                            </div>
+
+                            <!-- Session 3 -->
+                            <div class="program-card" data-step="3">
+                                <div class="program-card-time">13h00 - 13h30</div>
+                                <div class="program-card-tag">Spécialisation</div>
+                                <h3>Applications par secteur d'activité</h3>
+                                <p>Découvrez des cas d'usage spécifiques à votre industrie et comment adapter ces outils à vos besoins particuliers pour maximiser votre productivité.</p>
+                                <div class="program-topics">
+                                    <span>Marketing</span>
+                                    <span>RH</span>
+                                    <span>Finance</span>
+                                    <span>Vente</span>
+                                    <span>IT</span>
+                                </div>
+                            </div>
+
+                            <!-- Session 4 -->
+                            <div class="program-card" data-step="4">
+                                <div class="program-card-time">13h30 - 14h00</div>
+                                <div class="program-card-tag">Interactif</div>
+                                <h3>Session Questions & Réponses</h3>
+                                <p>Posez toutes vos questions et obtenez des réponses personnalisées pour approfondir votre compréhension et résoudre vos problématiques spécifiques.</p>
+                                <div class="program-bonus">
+                                    <i class="fas fa-gift"></i> Bonus: Accès à notre communauté Slack pendant 30 jours
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="format-right">
+                        <div class="format-features">
+                            <div class="features-header">
+                                <h3 class="features-heading"><i class="fas fa-star"></i> Ce qui rend ce workshop unique</h3>
+                                <div class="features-divider"></div>
+                            </div>
+
+                            <div class="format-feature animate-on-scroll">
+                                <div class="feature-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>100% en ligne et interactif</h3>
+                                    <p>Participez depuis n'importe où, sur votre ordinateur ou tablette, avec une expérience interactive complète.</p>
+                                </div>
+                            </div>
+
+                            <div class="format-feature animate-on-scroll">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Expert reconnu en IA</h3>
+                                    <p>Workshop animé par un spécialiste ayant formé plus de 500 professionnels aux outils d'IA générative.</p>
+                                </div>
+                            </div>
+
+                            <div class="format-feature animate-on-scroll">
+                                <div class="feature-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Démonstrations en conditions réelles</h3>
+                                    <p>Observez l'utilisation des outils sur des cas concrets et applicables immédiatement à votre contexte.</p>
+                                </div>
+                            </div>
+
+                            <div class="format-feature animate-on-scroll">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-download"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Pack de ressources premium</h3>
+                                    <p>Recevez un pack complet incluant slides, templates, guides pratiques et accès à des ressources exclusives.</p>
+                                </div>
+                            </div>
+
+                            <!-- Nouvelle fonctionnalité ajoutée -->
+                            <div class="format-feature animate-on-scroll featured-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Suivi personnalisé <span class="new-tag">NOUVEAU</span></h3>
+                                    <p>Bénéficiez d'un suivi personnalisé de 2 semaines pour vous accompagner dans l'implémentation des techniques apprises.</p>
+                                </div>
+                            </div>
+
+                            <div class="format-guarantee">
+                                <div class="guarantee-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="guarantee-content">
+                                    <h4>Garantie satisfaction 100%</h4>
+                                    <p>Si vous n'êtes pas satisfait, nous vous remboursons intégralement sans question.</p>
+                                    <div class="guarantee-badge">100% SATISFAIT OU REMBOURSÉ</div>
+                                </div>
+                            </div>
+
+                            <div class="format-cta">
+                                <a href="#inscription" class="cta-button primary-cta pulse-animation">Réserver ma place maintenant</a>
+                                <div class="spots-left">
+                                    <div class="spots-pulse"></div>
+                                    <i class="fas fa-user-clock"></i> Plus que <span class="highlight-number">8</span> places disponibles
+                                </div>
+                                <div class="next-session">Prochaine session: <strong>25 mai 2025</strong></div>
+                                <!-- Ajout d'une liste d'attente -->
+                                <div class="waiting-list">
+                                    <i class="fas fa-envelope"></i> <a href="#" class="waiting-list-link">M'inscrire sur liste d'attente si complet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials animate-on-scroll">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag">Témoignages</span>
+                    <h2>Ce qu'en disent nos participants</h2>
+                    <div class="rating-overall">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="rating-text">4.9/5 sur 127 avis <span class="verified-badge"><i class="fas fa-check-circle"></i>Vérifiés</span></div>
+                    </div>
+                </div>
+
+                <!-- Grille de témoignages simple et statique -->
+                <div class="testimonials-grid animate-on-scroll">
+                    <!-- Témoignage 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Cette formation m'a permis de <span class="highlight-text">gagner 5h par semaine</span> grâce aux outils d'IA présentés. Les techniques sont immédiatement applicables et ont transformé ma façon de travailler."</p>
+                        </div>
+                        <div class="testimonial-badge">
+                            <div class="result-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="result-content">
+                                <span class="result-value counter-animation">+30%</span>
+                                <span class="result-label">de productivité</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-profile">
+                                <img src="./images/femme.jpg" alt="Marie L." class="testimonial-avatar">
+                                <div class="testimonial-meta">
+                                    <h4>Marie Leblanc <span class="verified-badge"><i class="fas fa-check-circle"></i>Vérifié</span></h4>
+                                    <p>Responsable Marketing, <span class="testimonial-company">TechVision</span></p>
+                                </div>
+                            </div>
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Témoignage 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Enfin une approche <span class="highlight-text">concrète de l'IA générative</span> avec des cas d'usage applicables immédiatement. J'ai pu automatiser la création de nos user stories et gagner un temps précieux."</p>
+                        </div>
+                        <div class="testimonial-badge">
+                            <div class="result-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="result-content">
+                                <span class="result-value counter-animation">40%</span>
+                                <span class="result-label">d'automatisation</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-profile">
+                                <img src="images/homme.jpg" alt="Thomas D." class="testimonial-avatar">
+                                <div class="testimonial-meta">
+                                    <h4>Thomas Dubois <span class="verified-badge"><i class="fas fa-check-circle"></i>Vérifié</span></h4>
+                                    <p>Product Manager, <span class="testimonial-company">InnovateCorp</span></p>
+                                </div>
+                            </div>
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Témoignage 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Formation claire et <span class="highlight-text">accessible même pour les non-techniciens</span>. J'ai pu implémenter les conseils dès le lendemain pour la rédaction de nos offres d'emploi et l'analyse des CV."</p>
+                        </div>
+                        <div class="testimonial-badge">
+                            <div class="result-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="result-content">
+                                <span class="result-value counter-animation">50%</span>
+                                <span class="result-label">gain de temps</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-profile">
+                                <img src="images/femme.jpg" alt="Sophie M." class="testimonial-avatar">
+                                <div class="testimonial-meta">
+                                    <h4>Sophie Martin <span class="verified-badge"><i class="fas fa-check-circle"></i>Vérifié</span></h4>
+                                    <p>Consultante RH, <span class="testimonial-company">HumanFirst</span></p>
+                                </div>
+                            </div>
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-cta animate-on-scroll">
+                    <a href="#inscription" class="cta-button primary-cta">Rejoindre les participants satisfaits</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscription" class="registration animate-on-scroll">
+            <div class="container">
+                <h2 style="text-align: center;">Réserve ta place maintenant</h2>
+                <p class="limited-spots">Places limitées à 100 participants pour garantir la qualité des échanges</p>
+
+                <form id="registration-form" class="registration-form animate-on-scroll">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Nom et prénom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email professionnel" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company" placeholder="Entreprise" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="position" name="position" placeholder="Poste" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">J'accepte de recevoir des informations de DataBird</label>
+                    </div>
+                    <button type="submit" class="cta-button submit-button form-button-fixed" style="opacity: 1 !important; visibility: visible !important; transform: none !important;">Je réserve ma place gratuitement <i class="fas fa-arrow-right"></i></button>
+                </form>
+
+                <div class="secondary-cta">
+                    <p>Tu n'es pas disponible à cette date ?</p>
+                    <a href="#" class="secondary-button">Être informé des prochaines sessions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Logo et description -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="DataBird Logo">
+                    </div>
+                    <p class="footer-tagline">Formez-vous aux outils IA les plus performants et transformez votre productivité.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Formation links -->
+                <div class="footer-nav">
+                    <h4>Formations</h4>
+                    <ul>
+                        <li><a href="#">Workshops IA</a></li>
+                        <li><a href="#">Formations entreprise</a></li>
+                        <li><a href="#">Webinaires gratuits</a></li>
+                        <li><a href="#">Certification DataBird</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources links -->
+                <div class="footer-resources">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides pratiques</a></li>
+                        <li><a href="#">Études de cas</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact information -->
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@databird.io">contact@databird.io</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+33187654321">+33 1 87 65 43 21</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Paris, France</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright and legal links -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 DataBird. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

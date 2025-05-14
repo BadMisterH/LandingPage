@@ -1,0 +1,301 @@
+/**
+ * Styles optimisés pour le footer
+ * Ces styles garantissent que le footer est affiché correctement
+ * indépendamment des autres scripts et styles
+ */
+
+.site-footer {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 80px 0 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Arrière-plan avec dégradé subtil */
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(94, 23, 235, 0.05) 0%, rgba(0, 0, 0, 0) 50%);
+    z-index: 1;
+}
+
+.site-footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Structure de la grille du footer */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Logo et section de la marque */
+.footer-brand {
+    grid-column: span 1;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    height: 40px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover img {
+    transform: scale(1.05);
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Section des réseaux sociaux */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.footer-social a {
+    color: white;
+    background: linear-gradient(135deg, rgba(94, 23, 235, 0.8), rgba(122, 58, 255, 0.8));
+    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.footer-social a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-8px) scale(1.15);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.footer-social a:hover::before {
+    opacity: 1;
+    animation: pulse-light 1.5s infinite;
+}
+
+@keyframes pulse-light {
+    0% {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+    70% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+/* Titres de section */
+.site-footer h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.site-footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    border-radius: 3px;
+}
+
+/* Listes de liens */
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li {
+    margin-bottom: 12px;
+}
+
+.site-footer ul li a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 0;
+    display: inline-block;
+}
+
+.site-footer ul li a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.site-footer ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-light);
+    transition: width 0.3s ease;
+}
+
+.site-footer ul li a:hover::before {
+    width: 100%;
+}
+
+/* Icônes dans la section contact */
+.footer-contact ul li i {
+    color: var(--primary-light);
+    font-size: 1rem;
+    width: 25px;
+    text-align: center;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-contact ul li:hover i {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+.footer-contact ul li a,
+.footer-contact ul li span {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-contact ul li a:hover {
+    color: white;
+}
+
+/* Copyright et liens légaux */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+/* Responsive design pour le footer */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: span 1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-legal {
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-tagline {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .site-footer h4 {
+        text-align: center;
+    }
+
+    .site-footer h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
