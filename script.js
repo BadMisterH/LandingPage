@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSlide(index) {
         // Vérifier si les éléments existent
         if (!testimonials.length || !dots.length) {
-            console.log('Éléments de témoignage non trouvés');
+            // console.log('Éléments de témoignage non trouvés');
             return;
         }
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Here you would typically send the data to your backend
             // For this example, we'll just log it and show a success message
-            console.log('Form submitted with data:', formDataObj);
+            // console.log('Form submitted with data:', formDataObj);
 
             // Show success message
             form.innerHTML = `
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 gtag('event', 'conversion', {
                     'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
                     'event_callback': function() {
-                        console.log('Conversion tracked successfully');
+                        // console.log('Conversion tracked successfully');
                     }
                 });
             }
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.style.left = '0';
         overlay.style.width = '100%';
         overlay.style.height = '100%';
-        overlay.style.backgroundColor = '#5e17eb';
+        overlay.style.backgroundColor = 'white';
         overlay.style.zIndex = '9999';
         overlay.style.display = 'flex';
         overlay.style.alignItems = 'center';
@@ -559,23 +559,28 @@ document.addEventListener('DOMContentLoaded', function() {
                         ease: "elastic.out(1, 0.5)"
                     });
                 }
-            });
-        });
+            });        });
 
         // Animation des icônes avec rotation et apparition
         gsap.from('.benefit-content .icon', {
             scrollTrigger: {
                 trigger: '.benefits-grid',
                 start: 'top 70%',
-                toggleActions: 'play none none reverse'
+                toggleActions: 'play none none reverse',
+                once: false // Assure que l'animation se joue à chaque fois que l'élément entre dans la vue
             },
             rotate: -45,
             opacity: 0,
             scale: 0.2,
             transformOrigin: "center center",
             duration: 1.2,
-            stagger: 0.2,
-            ease: "elastic.out(1, 0.3)"
+            stagger: {
+                each: 0.2,
+                from: "start",
+                ease: "power1.in"
+            },
+            ease: "elastic.out(1, 0.3)",
+            clearProps: "opacity,rotate,scale,x,y,transform,transformOrigin" // Nettoie explicitement toutes les propriétés CSS qui pourraient causer des problèmes
         });
 
         // Animation des numéros de bénéfices avec effet 3D
@@ -802,7 +807,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Animation des icônes avec effet brillant
             gsap.from('.feature-icon', {
-                opacity: 0,
                 scale: 0.5,
                 rotation: -30,
                 transformOrigin: "center center",
@@ -1342,7 +1346,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Arrêter d'observer cet élément une fois animé
                 observer.unobserve(entry.target);
 
-                console.log(`Element rendu visible: ${entry.target.className}`);
+                // console.log(`Element rendu visible: ${entry.target.className}`);
             }
         });
     }, observerOptions);
@@ -1358,7 +1362,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fonction pour initialiser le compteur à rebours avec animations
     function initWorkshopCountdown() {
-        console.log('🕒 Initialisation du compte à rebours');
+        // console.log('🕒 Initialisation du compte à rebours');
 
         // Date de l'événement (11 jours à partir de maintenant pour les tests)
         const now = new Date();
@@ -1440,7 +1444,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }, 1000);
 
-        console.log('✅ Compte à rebours initialisé avec succès');
+        // console.log('✅ Compte à rebours initialisé avec succès');
     }
 
     // Fonction pour initialiser les interactions de la section workshop-format
@@ -1490,7 +1494,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Ici, vous pourriez ajouter du code pour charger dynamiquement du contenu
                 // spécifique au secteur sélectionné
                 const sector = this.getAttribute('data-sector');
-                console.log(`Secteur sélectionné : ${sector}`);
+                // console.log(`Secteur sélectionné : ${sector}`);
             });
         });
 
@@ -1504,7 +1508,7 @@ document.addEventListener('DOMContentLoaded', function() {
             questionBtn.addEventListener('click', function() {
                 if (questionInput.value.trim() !== '') {
                     // Ici, vous pourriez envoyer la question à un serveur
-                    console.log(`Question soumise : ${questionInput.value}`);
+                    // console.log(`Question soumise : ${questionInput.value}`);
 
                     // Afficher un message de confirmation
                     preQuestionForm.innerHTML = '<p class="question-success">Votre question a bien été envoyée. Merci !</p>';
@@ -1538,7 +1542,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.style.cssText = 'display: flex !important; visibility: visible !important; opacity: 1 !important;';
             });
 
-            console.log('Visibilité de la section benefits forcée avec !important');
+            // console.log('Visibilité de la section benefits forcée avec !important');
         } else {
             console.error('Section benefits non trouvée');
         }
@@ -1551,7 +1555,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fonction pour initialiser la timeline verticale
     function initVerticalTimeline() {
-        console.log("Initialisation de la timeline verticale...");
+        // console.log("Initialisation de la timeline verticale...");
 
         // Sélection du conteneur de la timeline verticale
         const timelineContainer = document.querySelector('.format-timeline.vertical');
@@ -1571,7 +1575,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const verticalTimelineItems = document.querySelectorAll('.format-timeline.vertical .timeline-item');
 
         if (verticalTimelineItems && verticalTimelineItems.length > 0) {
-            console.log("Timeline verticale trouvée avec", verticalTimelineItems.length, "éléments");
+            // console.log("Timeline verticale trouvée avec", verticalTimelineItems.length, "éléments");
 
             // Ajouter une classe pour l'initialisation GSAP
             timelineContainer.classList.add('gsap-init');
@@ -1590,7 +1594,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Ajouter la classe active à l'item cliqué
                     this.classList.add('active');
 
-                    console.log("Élément de timeline activé:", this.querySelector('h3')?.textContent || "Sans titre");
+                    // console.log("Élément de timeline activé:", this.querySelector('h3')?.textContent || "Sans titre");
                 });
             });
 
@@ -1632,7 +1636,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, "-=0.5");
             }
         } else {
-            console.log("Aucune timeline verticale trouvée dans le document");
+            // console.log("Aucune timeline verticale trouvée dans le document");
         }
     }
 
@@ -1679,7 +1683,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const submitButton = document.querySelector('.submit-button');
 
         if (submitButton) {
-            console.log('🛠️ Correction du bouton de soumission...');
+            // console.log('🛠️ Correction du bouton de soumission...');
 
             // Suppression d'éventuels styles inline problématiques
             submitButton.removeAttribute('style');
@@ -1692,7 +1696,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Ajouter une classe pour appliquer des styles supplémentaires
             submitButton.classList.add('form-button-fixed');
 
-            console.log('✅ Styles du bouton de soumission corrigés');
+            // console.log('✅ Styles du bouton de soumission corrigés');
 
             // Observer les changements de style pour maintenir la visibilité
             if (window.MutationObserver) {
@@ -1707,7 +1711,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 submitButton.style.opacity = '1';
                                 submitButton.style.transform = 'none';
                                 submitButton.style.visibility = 'visible';
-                                console.log('🔄 Styles du bouton réappliqués');
+                                // console.log('🔄 Styles du bouton réappliqués');
                             }
                         }
                     });
@@ -1845,13 +1849,13 @@ document.addEventListener('DOMContentLoaded', function() {
 (function() {
     // Fonction de débogage sans bouton
     function debugAnimations() {
-        console.log('🔍 Vérification des animations activée');
+        // console.log('🔍 Vérification des animations activée');
         // La fonction est conservée mais sans créer de bouton visible
     }
 
     // Réinitialiser toutes les animations
     function resetAllAnimations() {
-        console.log('🔄 Réinitialisation des animations...');
+        // console.log('🔄 Réinitialisation des animations...');
 
         // Supprimer toutes les classes 'visible'
         document.querySelectorAll('.visible').forEach(el => {
@@ -1879,7 +1883,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollBy(0, 1);
         window.scrollBy(0, -1);
 
-        console.log('✅ Animations réinitialisées! Faites défiler pour voir les animations.');
+        // console.log('✅ Animations réinitialisées! Faites défiler pour voir les animations.');
     }
 
     // Attendre que le DOM soit chargé
@@ -1888,7 +1892,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(debugAnimations, 1500);
 
         // Log pour confirmer que le script est chargé
-        console.log('🔍 Script de débogage d\'animations chargé');
+        // console.log('🔍 Script de débogage d\'animations chargé');
     });
 })();
 
@@ -1907,7 +1911,7 @@ class TrafficSourceTracker {
         if (this.hasUtmParameters()) {
             const utmData = this.captureUtmParameters();
             this.storeTrafficSource(utmData);
-            console.log('UTM parameters captured:', utmData);
+            // console.log('UTM parameters captured:', utmData);
         }
 
         // Écoute des événements de conversion
@@ -2020,7 +2024,7 @@ class TrafficSourceTracker {
         // Stockage local pour debug
         this.storeConversionEvent(conversionEvent);
 
-        console.log('Conversion tracked:', conversionEvent);
+        // console.log('Conversion tracked:', conversionEvent);
         return conversionEvent;
     }
 
@@ -2135,7 +2139,7 @@ class TrafficSourceTracker {
             };
         }
 
-        console.log('Conversion Report:', report);
+        // console.log('Conversion Report:', report);
         return report;
     }
 }
@@ -2151,7 +2155,7 @@ function createConversionDashboard() {
     // Cette fonction pourrait être utilisée pour créer un dashboard visuel
     // des conversions par source de trafic
     const report = trafficTracker.generateSourceReport();
-    console.log('Dashboard data prepared:', report);
+    // console.log('Dashboard data prepared:', report);
 
     // Ici, vous pourriez injecter un élément visuel dans la page
     // pour les administrateurs ou pour le debug
@@ -2221,7 +2225,7 @@ function trackCTAClicks() {
                 });
             }
 
-            console.log('CTA click tracked:', buttonText, 'in section:', sectionId);
+            // console.log('CTA click tracked:', buttonText, 'in section:', sectionId);
         });
     });
 }
@@ -2250,7 +2254,7 @@ function trackAnchorLinks() {
                 });
             }
 
-            console.log('Navigation tracked:', linkText, 'to section:', targetId);
+            // console.log('Navigation tracked:', linkText, 'to section:', targetId);
         });
     });
 }
@@ -2265,7 +2269,7 @@ function trackForms() {
     if (regForm) {
         regForm.addEventListener('submit', function(e) {
             // Le formulaire est déjà tracké dans le script principal, mais on pourrait ajouter des métriques ici
-            console.log('Form submission tracked');
+            // console.log('Form submission tracked');
         });
     }
 
@@ -2288,7 +2292,7 @@ function trackForms() {
                 });
             }
 
-            console.log('Question submission tracked');
+            // console.log('Question submission tracked');
 
             // Simuler l'envoi du formulaire (à remplacer par votre API réelle)
             setTimeout(() => {
@@ -2321,7 +2325,7 @@ function trackForms() {
                 });
             }
 
-            console.log('Newsletter submission tracked');
+            // console.log('Newsletter submission tracked');
 
             // Simuler l'envoi du formulaire (à remplacer par votre API réelle)
             setTimeout(() => {
@@ -2360,7 +2364,7 @@ function findParentSection(element) {
 document.addEventListener('DOMContentLoaded', function() {
     // Fonction pour initialiser les animations au défilement
     function initScrollAnimations() {
-        console.log('🎬 Initialisation des animations au défilement');
+        // console.log('🎬 Initialisation des animations au défilement');
 
         // Liste des types d'éléments à animer
         const animatableSelectors = [
@@ -2386,7 +2390,7 @@ document.addEventListener('DOMContentLoaded', function() {
         elementsToAnimate.forEach(element => {
             if (!element.classList.contains('animation-ready')) {
                 element.classList.add('animation-ready');
-                console.log(`✅ Élément préparé pour animation: ${element.className}`);
+                // console.log(`✅ Élément préparé pour animation: ${element.className}`);
             }
 
             // Pour les sections, animer également les enfants spécifiques
@@ -2399,7 +2403,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        console.log(`🎬 ${elementsToAnimate.length} éléments préparés pour l'animation au défilement`);
+        // console.log(`🎬 ${elementsToAnimate.length} éléments préparés pour l'animation au défilement`);
     }
 
     // Créer un nouvel observateur pour forcer l'animation des éléments qui sont déjà visibles
@@ -2415,7 +2419,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     immediateObserver.unobserve(entry.target);
-                    console.log(`🎬 Animation forcée: ${entry.target.className}`);
+                    // console.log(`🎬 Animation forcée: ${entry.target.className}`);
                 }
             });
         }, immediateOptions);
@@ -2463,7 +2467,7 @@ document.addEventListener('DOMContentLoaded', function() {
             column.style.setProperty('--i', index);
         });
 
-        console.log('⏱️ Délais en cascade ajoutés');
+        // console.log('⏱️ Délais en cascade ajoutés');
     }
 
     // Exécuter après un court délai
@@ -2474,13 +2478,13 @@ document.addEventListener('DOMContentLoaded', function() {
 (function() {
     // Fonction de débogage sans bouton
     function debugAnimations() {
-        console.log('🔍 Vérification des animations activée');
+        // console.log('🔍 Vérification des animations activée');
         // La fonction est conservée mais sans créer de bouton visible
     }
 
     // Réinitialiser toutes les animations
     function resetAllAnimations() {
-        console.log('🔄 Réinitialisation des animations...');
+        // console.log('🔄 Réinitialisation des animations...');
 
         // Supprimer toutes les classes 'visible'
         document.querySelectorAll('.visible').forEach(el => {
@@ -2508,7 +2512,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollBy(0, 1);
         window.scrollBy(0, -1);
 
-        console.log('✅ Animations réinitialisées! Faites défiler pour voir les animations.');
+        // console.log('✅ Animations réinitialisées! Faites défiler pour voir les animations.');
     }
 
     // Attendre que le DOM soit chargé
@@ -2517,7 +2521,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(debugAnimations, 1500);
 
         // Log pour confirmer que le script est chargé
-        console.log('🔍 Script de débogage d\'animations chargé');
+        // console.log('🔍 Script de débogage d\'animations chargé');
     });
 })();
 
