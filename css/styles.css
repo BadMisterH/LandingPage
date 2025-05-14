@@ -437,17 +437,14 @@ h1 {
   z-index: 1;
 }
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 30px;
-  margin-bottom: 60px;
-}
+
 
 @media (max-width: 992px) {
   .benefits-grid {
     gap: 20px;
+    display: grid !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .benefit-card {
@@ -458,7 +455,11 @@ h1 {
 
 @media (max-width: 768px) {
   .benefits-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 40px;
   }
 
   .benefits {
@@ -469,6 +470,10 @@ h1 {
 @media (max-width: 576px) {
   .benefits {
     padding: 50px 0;
+  }
+
+  .benefits-grid {
+    gap: 15px;
   }
 
   .benefit-card {
@@ -5626,8 +5631,8 @@ footer.visible {
 
 @media screen and (max-width: 600px) {
   .benefits-grid {
-    display: flex !important;
-    flex-direction: column !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
   }
 }
 
@@ -5647,11 +5652,25 @@ footer.visible {
 }
 
 .benefits-grid {
-  display: grid ;
+  display: grid !important;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 30px;
-  visibility: visible;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Style pour la classe animation-ready de benefits-grid */
+.benefits-grid.animation-ready {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Animation de la benefits-grid lorsqu'elle devient visible */
+.benefits-grid.visible {
+  transform: translateY(0);
   opacity: 1;
 }
 

@@ -59,7 +59,7 @@
                     <p class="section-intro">Un programme complet pour maîtriser l'IA générative et l'appliquer immédiatement à ton travail quotidien.</p>
                 </div>
 
-                <div class="benefits-grid">
+                <div class="benefits-grid animation-ready visible">
                     <div class="benefit-card animate-on-scroll">
                         <div class="benefit-number">01</div>
                         <div class="benefit-content">
@@ -115,13 +115,54 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-
-                <div class="benefits-cta animate-on-scroll">
+                </div>                <div class="benefits-cta animate-on-scroll">
                     <a href="#inscription" class="cta-button secondary-cta" style="opacity: 1 !important;">Réserver ma place maintenant</a>
                 </div>
             </div>
         </section>
+
+        <!-- Script pour garantir la visibilité de la benefits-grid -->
+        <script>
+            (function() {
+                // Fonction pour rendre la benefits-grid visible et responsive
+                function makeGridVisible() {
+                    var grid = document.querySelector('.benefits-grid');
+                    if (grid) {
+                        // Ajouter les classes
+                        grid.classList.add('animation-ready', 'visible');
+
+                        // Styles inline avec !important
+                        grid.style.setProperty('display', 'grid', 'important');
+                        grid.style.setProperty('visibility', 'visible', 'important');
+                        grid.style.setProperty('opacity', '1', 'important');
+
+                        // Responsive styling
+                        if (window.innerWidth <= 768) {
+                            grid.style.setProperty('grid-template-columns', '1fr', 'important');
+                        } else {
+                            grid.style.setProperty('grid-template-columns', 'repeat(2, 1fr)', 'important');
+                        }
+
+                        // Assurer la visibilité de chaque carte
+                        var cards = grid.querySelectorAll('.benefit-card');
+                        cards.forEach(function(card) {
+                            card.style.setProperty('visibility', 'visible', 'important');
+                            card.style.setProperty('opacity', '1', 'important');
+                        });
+                    }
+                }
+
+                // Exécuter immédiatement
+                makeGridVisible();
+
+                // Et après un court délai
+                setTimeout(makeGridVisible, 100);
+                setTimeout(makeGridVisible, 500);
+
+                // Aussi au chargement complet
+                window.addEventListener('load', makeGridVisible);
+            })();
+        </script>
 
         <!-- Script inline pour forcer l'affichage de la section benefits -->
         <script>

@@ -1528,12 +1528,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const container = benefitsSection.querySelector('.container');
             if (container) {
                 container.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important;';
-            }
-
-            // S'assurer que la grille est visible et configurée en 2 colonnes et 2 lignes
+            }            // S'assurer que la grille est visible et configurée en 2 colonnes et 2 lignes
             const grid = benefitsSection.querySelector('.benefits-grid');
             if (grid) {
                 grid.style.cssText = 'display: grid !important; grid-template-columns: repeat(2, 1fr) !important; grid-template-rows: repeat(2, auto) !important; visibility: visible !important; opacity: 1 !important;';
+                // Ajouter les classes animation-ready et visible
+                if (!grid.classList.contains('animation-ready')) {
+                    grid.classList.add('animation-ready');
+                }
+                if (!grid.classList.contains('visible')) {
+                    grid.classList.add('visible');
+                }
             }
 
             // S'assurer que les cartes sont visibles
@@ -2645,6 +2650,51 @@ document.addEventListener('DOMContentLoaded', function() {
     // Faire pulser les secondes chaque seconde pour montrer que le compteur est actif
     setInterval(addPulseEffect, 1000);
 });
+
+
+// Fonction spécifique pour garantir la visibilité et responsivité de la benefits-grid
+function ensureBenefitsGridVisibility() {
+    const benefitsGrids = document.querySelectorAll('.benefits-grid');
+
+    if (benefitsGrids.length) {
+        benefitsGrids.forEach(grid => {
+            // S'assurer que la grille a la classe animation-ready et visible
+            grid.classList.add('animation-ready', 'visible');
+
+            // Appliquer des styles inline importants pour garantir la visibilité
+            grid.style.display = 'grid';
+            grid.style.visibility = 'visible';
+            grid.style.opacity = '1';
+
+            // Appliquer des styles responsive en fonction de la largeur d'écran
+            if (window.innerWidth <= 768) {
+                grid.style.gridTemplateColumns = '1fr';
+            } else {
+                grid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            }
+
+            // S'assurer que tous les enfants directs sont également visibles
+            const children = grid.children;
+            for (let i = 0; i < children.length; i++) {
+                children[i].style.visibility = 'visible';
+                children[i].style.opacity = '1';
+                children[i].classList.add('visible');
+            }
+
+            console.log('✅ Visibilité de benefits-grid forcée avec succès');
+        });
+    } else {
+        console.warn('⚠️ Aucune grille benefits-grid trouvée dans le document');
+    }
+}
+
+// Exécuter cette fonction après chargement du DOM et après un délai
+document.addEventListener('DOMContentLoaded', ensureBenefitsGridVisibility);
+setTimeout(ensureBenefitsGridVisibility, 500);
+setTimeout(ensureBenefitsGridVisibility, 1500);
+
+// Également au redimensionnement de la fenêtre pour garantir la responsivité
+window.addEventListener('resize', ensureBenefitsGridVisibility);
 
 
   // Force un rafraîchissement du cache pour les fichiers JS et CSS
