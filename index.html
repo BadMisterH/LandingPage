@@ -13,7 +13,6 @@
     <meta property="og:url" content="https://databird.co/workshop-ia">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- GSAP Animation Library -->
@@ -120,74 +119,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Script pour garantir la visibilité de la benefits-grid -->
-        <script>
-            (function() {
-                // Fonction pour rendre la benefits-grid visible et responsive
-                function makeGridVisible() {
-                    var grid = document.querySelector('.benefits-grid');
-                    if (grid) {
-                        // Ajouter les classes
-                        grid.classList.add('animation-ready', 'visible');
-
-                        // Styles inline avec !important
-                        grid.style.setProperty('display', 'grid', 'important');
-                        grid.style.setProperty('visibility', 'visible', 'important');
-                        grid.style.setProperty('opacity', '1', 'important');
-
-                        // Responsive styling
-                        if (window.innerWidth <= 768) {
-                            grid.style.setProperty('grid-template-columns', '1fr', 'important');
-                        } else {
-                            grid.style.setProperty('grid-template-columns', 'repeat(2, 1fr)', 'important');
-                        }
-
-                        // Assurer la visibilité de chaque carte
-                        var cards = grid.querySelectorAll('.benefit-card');
-                        cards.forEach(function(card) {
-                            card.style.setProperty('visibility', 'visible', 'important');
-                            card.style.setProperty('opacity', '1', 'important');
-                        });
-                    }
-                }
-
-                // Exécuter immédiatement
-                makeGridVisible();
-
-                // Et après un court délai
-                setTimeout(makeGridVisible, 100);
-                setTimeout(makeGridVisible, 500);
-
-                // Aussi au chargement complet
-                window.addEventListener('load', makeGridVisible);
-            })();
-        </script>
-
-        <!-- Script inline pour forcer l'affichage de la section benefits -->
-        <script>
-            (function() {
-                // Force l'affichage de la section benefits immédiatement
-                var benefitsSection = document.getElementById('benefits-section');
-                if (benefitsSection) {
-                    benefitsSection.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important;';
-                }
-
-                // Réexécute cette vérification après un court délai
-                setTimeout(function() {
-                    var section = document.getElementById('benefits-section');
-                    if (section) {
-                        section.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important;';
-                        console.log('Section benefits forcée à être visible par script inline');
-                    }
-
-                    // Initialiser les composants améliorés
-                    if (typeof initComponentAnimations === 'function') {
-                        initComponentAnimations();
-                    }
-                }, 500);
-            })();
-        </script>
 
         <!-- Nouvelle section pour les technologies tendance -->
         <section class="benefits animate-on-scroll animation-ready visible" id="technologies-section">
